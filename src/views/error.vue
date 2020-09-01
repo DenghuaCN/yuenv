@@ -16,7 +16,7 @@ import tabBar from '../components/tabBar'
 export default {
   name: 'empty',
   components: { noData, tabBar },
-  data () {
+  data() {
     return {
       keyword: '',
       activeIndex: 1,
@@ -27,10 +27,10 @@ export default {
     }
   },
   methods: {
-    toSearch () {
+    toSearch() {
       console.log('搜索')
     },
-    cancelSearch () {
+    cancelSearch() {
       console.log('取消搜索')
     }
   }

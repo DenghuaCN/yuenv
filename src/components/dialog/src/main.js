@@ -4,7 +4,7 @@ import Main from './main.vue'
 let DialogConstructor = Vue.extend(Main)
 
 let instance
-const Dialog = function (options) {
+const Dialog = function(options) {
   options = options || {}
   instance = new DialogConstructor({
     data: options

@@ -41,7 +41,7 @@ http.interceptors.response.use(
   }
 )
 
-function get (url, data, lodaing) {
+function get(url, data, lodaing) {
   return new Promise((resolve, reject) => {
     http.get(url)
       .then(
@@ -58,7 +58,7 @@ function get (url, data, lodaing) {
   })
 }
 
-function post (url, data, loading) {
+function post(url, data, loading) {
   return new Promise((resolve, reject) => {
     http.post(url, data, { loading: loading })
       .then(

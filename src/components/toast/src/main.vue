@@ -16,14 +16,14 @@
 <script>
 export default {
   name: 'little-tip',
-  data () {
+  data() {
     return {
       showTip: true,
       msg: '',
       type: ''
     }
   },
-  mounted () {
+  mounted() {
     setTimeout(() => {
       this.showTip = false
     }, 1500)

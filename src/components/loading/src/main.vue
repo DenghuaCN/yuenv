@@ -12,7 +12,7 @@
 <script>
 export default {
   name: 'loading',
-  data () {
+  data() {
     return {
       loading: true,
       tip: '正在加载'

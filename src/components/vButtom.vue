@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       // txt: '提交'
     }
@@ -53,13 +53,13 @@ export default {
     }
   },
   methods: {
-    submit () {
+    submit() {
       this.$emit('onSubmit', '')
     },
-    onLeft () {
+    onLeft() {
       this.$emit('onLeft', '')
     },
-    onRight () {
+    onRight() {
       this.$emit('onRight', '')
     }
   }

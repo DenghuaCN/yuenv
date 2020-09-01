@@ -40,7 +40,7 @@ import { Actionsheet, DatetimePlugin } from 'vux'
 Vue.use(DatetimePlugin)
 export default {
   components: { Actionsheet, vButtom },
-  data () {
+  data() {
     return {
       userName: '',
       telephone: '',
@@ -52,7 +52,7 @@ export default {
     }
   },
   methods: {
-    selectDate (val) {
+    selectDate(val) {
       let vm = this
       this.$vux.datetime.show({
         value: vm.birthday,
@@ -63,15 +63,15 @@ export default {
         monthRow: '{value}月',
         dayRow: '{value}日',
         startDate: '1900-01-01',
-        onConfirm (val) {
+        onConfirm(val) {
           vm.birthday = val
         }
       })
     },
-    selectCard (key, val) {
+    selectCard(key, val) {
       this.cardName = val
     },
-    onSubmit () {
+    onSubmit() {
       if (!this.userName) {
         this.$toast({msg: '请输入客户名字'})
         return

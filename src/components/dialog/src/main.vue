@@ -24,7 +24,7 @@
 <script>
 export default {
   name: 'dialog-box',
-  data () {
+  data() {
     return {
       showDialog: true,
       type: 'text',
@@ -41,17 +41,17 @@ export default {
     }
   },
   methods: {
-    cancelClick () {
+    cancelClick() {
       this.showDialog = false
     },
-    confirmClick () {
+    confirmClick() {
       if (this.type === 'select' && !this.text) {
         return
       }
       this.confirm(this.text)
       this.showDialog = false
     },
-    toSelect (item) {
+    toSelect(item) {
       for (var i in this.list) {
         this.$set(this.list[i], 'isSelect', false)
       }
@@ -59,7 +59,7 @@ export default {
       this.text = item
     }
   },
-  mounted () {
+  mounted() {
     this.text = this.content
     if (this.type === 'textarea') {
       this.$nextTick(() => {

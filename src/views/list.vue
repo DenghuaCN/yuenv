@@ -18,7 +18,7 @@
 import tabBar from '../components/tabBar'
 export default {
   components: { tabBar },
-  data () {
+  data() {
     return {
       keyword: '',
       activeIndex: 0,
@@ -34,12 +34,12 @@ export default {
     }
   },
   methods: {
-    refresh (done) {
+    refresh(done) {
       this.list = []
       this.params.pageNum = 1
       this.getList(done)
     },
-    infinite (done) {
+    infinite(done) {
       if (this.list.length > 25) {
         this.$refs.scroller.finishInfinite(true)
         if (this.list.length < 10) {
@@ -51,7 +51,7 @@ export default {
         this.getList(done)
       }
     },
-    getList (done) {
+    getList(done) {
       document.getElementsByClassName('pull-to-refresh-layer')[0].style.display = 'block'
       for (let i = 0; i < 10; i++) {
         this.list.push({id: i + 1})

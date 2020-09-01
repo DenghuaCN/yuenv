@@ -5,7 +5,7 @@ let LoadingConstructor = Vue.extend(Main)
 
 let instance
 const Loading = {
-  show (options) {
+  show(options) {
     options = options || {}
     instance = new LoadingConstructor({
       data: options
@@ -14,7 +14,7 @@ const Loading = {
     document.body.appendChild(instance.vm.$el)
     return instance.vm
   },
-  hide () {
+  hide() {
     if (instance) {
       instance.vm.loading = false
     }

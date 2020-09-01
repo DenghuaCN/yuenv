@@ -8,7 +8,7 @@ const router = new Router({
     {
       path: '/',
       name: 'index',
-      meta: {keepAlive: true},
+      // meta: {keepAlive: true},
       component: (resolve) => {
         require(['../views/index'], resolve)
       }
@@ -16,7 +16,7 @@ const router = new Router({
     {
       path: '/list',
       name: 'listr',
-      meta: {keepAlive: false},
+      // meta: {keepAlive: true},
       component: (resolve) => {
         require(['../views/list'], resolve)
       }
@@ -24,7 +24,7 @@ const router = new Router({
     {
       path: '/mine',
       name: 'mine',
-      meta: {keepAlive: false},
+      // meta: {keepAlive: true},
       component: (resolve) => {
         require(['../views/mine'], resolve)
       }
@@ -32,7 +32,7 @@ const router = new Router({
     {
       path: '/error',
       name: 'error',
-      meta: {keepAlive: false},
+      // meta: {keepAlive: true},
       component: (resolve) => {
         require(['../views/error'], resolve)
       }
@@ -40,7 +40,7 @@ const router = new Router({
     {
       path: '/form',
       name: 'form',
-      meta: {keepAlive: false},
+      // meta: {keepAlive: true},
       component: (resolve) => {
         require(['../views/form'], resolve)
       }

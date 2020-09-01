@@ -4,7 +4,7 @@ import Main from './main.vue'
 let Toast = Vue.extend(Main)
 
 let instance
-const toast = function (options) {
+const toast = function(options) {
   options = options || {}
   instance = new Toast({
     data: options

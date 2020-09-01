@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       items: [
         {
@@ -34,7 +34,7 @@ export default {
     }
   },
   methods: {
-    toUrl (i) {
+    toUrl(i) {
       this.$router.replace({
         path: this.items[i].url
       })

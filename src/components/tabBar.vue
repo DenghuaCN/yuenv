@@ -15,7 +15,7 @@ export default {
     }
   },
   methods: {
-    toUrl (item) {
+    toUrl(item) {
       this.$router.replace({
         path: item.url
       })
