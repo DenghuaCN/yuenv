@@ -5,18 +5,12 @@
         <swiper-slide class="swiper-slide">
           <img class="swiper-img" src="../../assets/img/yuenv/banner1.png">
         </swiper-slide>
-        <swiper-slide class="swiper-slide">
-          <img class="swiper-img" src="../../assets/img/yuenv/banner2.png">
-        </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
 
       <swiper class="swiper-box" ref="mySwiper" :options="swiperOptions">
         <swiper-slide class="swiper-slide">
           <img class="swiper-img" src="../../assets/img/yuenv/banner2.png">
-        </swiper-slide>
-        <swiper-slide class="swiper-slide">
-          <img class="swiper-img" src="../../assets/img/yuenv/banner1.png">
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
@@ -35,7 +29,7 @@ export default {
         spaceBetween: 30,
         centeredSlides: true,
         pagination: '.swiper-pagination',
-        loop: true,
+        // loop: true,
         autoplay: {
           delay: 2500
           // disableOnInteraction: false
