@@ -3,6 +3,15 @@
   height: 100%;
   background-color: rgb(252,223,190);
   overflow: auto; // 父容器塌陷
+  .title-box {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    .title {
+      font-size: 24px;
+      color: #252323;
+    }
+  }
   .content-wrap {
     display: flex;
     flex-direction: column;
@@ -13,6 +22,7 @@
       border-radius: 4px;
       box-shadow: 0px 5px 10px 0px#f7d2a8;
       background-color: #fff;
+      transition: all 1s ease-out;
       .top {
         display: flex;
         justify-content: space-between;
@@ -28,16 +38,29 @@
           flex-direction: column;
           justify-content: start;
           flex-grow: 1;
-          .securities-name {
-            font-size: 20px;
-            letter-spacing: 0px;
-            color: #252323;
+          .securities-box {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            .securities-name {
+              font-size: 20px;
+              line-height: 20px;
+              letter-spacing: 0px;
+              color: #252323;
+              margin-right: 10px;
+            }
+            .small-securities-name {
+              font-size: 12px;
+              line-height: 12px;
+              color: #252323;
+            }
           }
           .icon-box {
-            border: 1px solid red;
+            // border: 1px solid red;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 10px;
             .icon-desc {
               display: flex;
               align-items: center;
@@ -56,10 +79,11 @@
         }
       }
       .content {
-        border: 1px solid green;
+        // border: 1px solid green;
         padding: 15px;
+        transition: all 1s ease-out;
         .main-desc {
-          border: 1px solid red;
+          // border: 1px solid red;
           display: flex;
           justify-content: center;
           align-items: start;
@@ -81,23 +105,28 @@
         }
         .get-more {
           margin: 14.5px 0;
-          border: 1px solid green;
+          // border: 1px solid green;
           display: flex;
           align-items: center;
           justify-content: flex-end;
+          cursor: pointer;
           span {
             font-size: 14px;
             letter-spacing: 0.2px;
             color: #999999;
-            margin-right: 3px;
           }
           .arrow{
+            display: inline-block;
             width: 0;
             height: 0;
             border: 7px solid;
             border-color: #999 transparent transparent transparent;
             position: relative;
-            top: 3.5px;
+            top: 5px;
+            transition: all 0.3s ease-out;
+            transform-origin: 50% 20%;
+            transform: rotate(180deg);
+
           }
           .arrow::after{
               content: '';
@@ -107,14 +136,20 @@
               border: 7px solid;
               border-color: white transparent transparent transparent;
           }
+          .active-arrow {
+            transform: rotate(0deg);
+
+          }
         }
         .active-desc {
-          border: 1px solid green;
+          // border: 1px solid green;
+          transition: all 1s ease-out;
+          height: 0;
+          overflow: hidden;
           .desc-item {
-            border: 1px solid #999999;
+            // border: 1px solid #999999;
             margin-bottom: 15px;
             display: flex;
-            justify-content: center;
             align-items: start;
             .left {
               .dot {
@@ -132,6 +167,10 @@
               letter-spacing: 0.2px;
             }
           }
+        }
+        .show-active-desc {
+          height: auto;
+          // visibility: hidden;
         }
       }
       .open-account {
