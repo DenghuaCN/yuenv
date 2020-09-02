@@ -12,8 +12,12 @@ import Loading from './components/loading'
 
 import VueScroller from 'vue-scroller'
 
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/swiper-bundle.css'
+
 Vue.use(VueScroller)
 Vue.use(utils)
+Vue.use(VueAwesomeSwiper)
 // Vue.use(vConsole)
 
 Vue.prototype.$toast = toast

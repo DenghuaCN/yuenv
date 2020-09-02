@@ -10,7 +10,7 @@ const router = new Router({
       name: 'index',
       // meta: {keepAlive: true},
       component: (resolve) => {
-        require(['../views/index'], resolve)
+        require(['../views/index/index'], resolve)
       }
     },
     {
