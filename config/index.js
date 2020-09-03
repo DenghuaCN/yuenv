@@ -9,7 +9,7 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/',  // 本地开发 assetsPublicPath: '/'
     proxyTable: {},
 
     // Various Dev Server settings
@@ -50,7 +50,8 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    // assetsPublicPath: '/',
+    assetsPublicPath: './', // 放github 使用 './'
 
     /**
      * Source Maps

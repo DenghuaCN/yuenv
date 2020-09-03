@@ -2,10 +2,6 @@
   <div class="viewport-wrap-box">
     <headerBanner></headerBanner>
 
-    <div class="title-box">
-      <h1 class="title">港美股开户</h1>
-    </div>
-
     <div class="content-wrap">
 
       <div class="item-box" v-for="(item, index) in dataList" :key="index">
@@ -57,16 +53,7 @@
     </div>
 
     <footer-component></footer-component>
-    <!-- <div class="banner">
-      <swiper :list="imgList" v-model="activeIndex" auto :show-dots="!showDots" dots-position="center"></swiper>
-    </div>
-    <div class="list clearfix">
-      <div class="item fl" v-for="(item,index) in itemList" :key="index" @click="toUrl(index)">
-        <img :src="item.icon" alt="">
-        <div class="itemName">{{item.name}}</div>
-      </div>
-    </div>
-    <footerBar></footerBar> -->
+
   </div>
 </template>
 
