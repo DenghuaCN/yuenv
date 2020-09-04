@@ -50,8 +50,8 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    // assetsPublicPath: '/',
-    assetsPublicPath: './', // 放github 使用 './'
+    assetsPublicPath: '/',      // http协议使用  '/'
+    // assetsPublicPath: './', // 放github 使用 './'
 
     /**
      * Source Maps
