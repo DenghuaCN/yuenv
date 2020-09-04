@@ -80,7 +80,7 @@ export default {
           iconDesc: ['入金奖励', '10倍融资', '独立暗盘'],
           mainDescList: [
             '开户即可获得<em>180天港股免佣</em>',
-            '首次入金<em>≥2万港币</em>，可获得<em>1次抽奖+基金收益券</em>：100%中签130港币小米股票，最高1000美金特斯拉股票。'
+            '首次入金<em>≥2万港币</em>，可获得<em>1次抽奖+基金收益券</em>：100%抽中130港币小米股票，最高1000美金特斯拉股票。'
           ],
           activeDesc: [
             '现金打新50，融资打新100，10倍杠杆，利率2-3%',
@@ -147,7 +147,7 @@ export default {
         {
           securitiesName: '东财国际证券',
           iconSrc: require('../../assets/img/yuenv/dong-cai.png'),
-          iconDesc: ['现场0费用', '20倍融资', '电子暗盘'],
+          iconDesc: ['现金0费用', '20倍融资', '电子暗盘'],
           mainDescList: [
             '<em>首次入金≥2W港币</em>，现金打新0费用。'
           ],
@@ -257,7 +257,7 @@ export default {
             '首次入金≥1W，放满30天并交易1次，<em>送180天免佣</em>（入金次月生效）。'
           ],
           activeDesc: [
-            '现金打新0，融资打新100，10倍杠杆',
+            '现金打新0，融资打新100，10~20倍杠杆',
             '支持fps，无银证转账，辉立暗盘，可1手融，不可市值打新',
             '交易佣金：免佣期间不收佣金，仅收12元平台费，暗盘万5，最低30',
             '卖出股票资金可实时用于打新'
@@ -266,23 +266,23 @@ export default {
           showActiveDesc: false,
           url: 'https://aosh5.eddidapp.com/?rf=QlhZMDA1OkVEQUE='
         },
-        {
-          securitiesName: '广发证券',
-          smallSecuritiesName: '易淘金国际版',
-          iconSrc: require('../../assets/img/yuenv/guang-fa.png'),
-          iconDesc: ['现金0费用', '10倍融资', '电话暗盘'],
-          mainDescList: [
-            '<em>现金打新0</em>，融资打新100，10倍杠杆，利率2-4%。'
-          ],
-          activeDesc: [
-            '无fps，<em>支持民生、招行、永隆银证转账</em>，电话暗盘，不可1手融，不可市值打新',
-            '交易佣金：0.1%（最低100元），无平台费，暗盘150元起',
-            '卖出股票资金可实时用于打新'
-          ],
-          activeArrow: true,
-          showActiveDesc: false,
-          url: 'https://kh.gfgroup.com.hk/?from=98008&channel=79&secondeChannel=&thirdChannel='
-        },
+        // {
+        //   securitiesName: '广发证券',
+        //   smallSecuritiesName: '易淘金国际版',
+        //   iconSrc: require('../../assets/img/yuenv/guang-fa.png'),
+        //   iconDesc: ['现金0费用', '10倍融资', '电话暗盘'],
+        //   mainDescList: [
+        //     '<em>现金打新0</em>，融资打新100，10倍杠杆，利率2-4%。'
+        //   ],
+        //   activeDesc: [
+        //     '无fps，<em>支持民生、招行、永隆银证转账</em>，电话暗盘，不可1手融，不可市值打新',
+        //     '交易佣金：0.1%（最低100元），无平台费，暗盘150元起',
+        //     '卖出股票资金可实时用于打新'
+        //   ],
+        //   activeArrow: true,
+        //   showActiveDesc: false,
+        //   url: 'https://kh.gfgroup.com.hk/?from=98008&channel=79&secondeChannel=&thirdChannel='
+        // },
         {
           securitiesName: '尊嘉金融',
           iconSrc: require('../../assets/img/yuenv/zun-jia.png'),
