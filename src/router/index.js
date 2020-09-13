@@ -14,6 +14,14 @@ const router = new Router({
       }
     },
     {
+      path: '/account',
+      name: 'account',
+      // meta: {keepAlive: true},
+      component: (resolve) => {
+        require(['../views/accout/account.vue'], resolve)
+      }
+    },
+    {
       path: '/list',
       name: 'listr',
       // meta: {keepAlive: true},
