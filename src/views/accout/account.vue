@@ -59,7 +59,11 @@ export default {
     },
     handlerOpenAccount() {
       if (!this.isMobile(this.phone)) {
-        alert('请输入正确的手机号码')
+        this.$toast({
+          msg: '请输入正确的电话号码',
+          type: 'warning'
+        })
+        this.isShowTips = true
         return false
       }
 
@@ -85,5 +89,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-    @import './account.less';
+@import "./account.less";
 </style>
