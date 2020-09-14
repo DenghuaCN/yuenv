@@ -43,6 +43,7 @@ export default {
   },
   watch: {
     $route(to, from) {
+      this.phone = ''
       this.securitiesName = to.query.name
     },
     phone(inputValue) {
