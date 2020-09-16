@@ -12,7 +12,7 @@
       <input class="phone-input" v-model="phone" type="text" placeholder="请输入手机号码">
     </div>
 
-    <div class="phone-desc" v-if="isShowTips">
+    <div class="phone-desc">
       <p>请输入正确手机号</p>
       <p>仅作<span>后期奖励发放和专属服务凭证</span></p>
     </div>
@@ -29,8 +29,7 @@ export default {
   data() {
     return {
       securitiesName: this.$route.query.name || '',
-      phone: '',
-      isShowTips: false
+      phone: ''
     }
   },
   beforeRouteLeave(to, from, next) { // 离开时

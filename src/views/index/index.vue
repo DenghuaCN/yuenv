@@ -48,7 +48,7 @@
 
         </div>
 
-        <button class="open-account" @click="goToAccount(item.securitiesName)">免费开户</button>
+        <button class="open-account" @click="goToUrl(item.url)">免费开户</button>
       </div>
     </div>
 
