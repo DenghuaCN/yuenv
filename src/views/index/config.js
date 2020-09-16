@@ -32,7 +32,7 @@ export const config = {
       ],
       activeArrow: true,
       showActiveDesc: false,
-      url: 'https://www.itiger.com/activity/market/2019/stock-ali/?noPromotion=1&invite=WY01'
+      url: 'https://www.itiger.com/activity/market/2019/stock-ali/?noPromotion=1&invite=TG001'
     },
     {
       securitiesName: '华盛证券',
@@ -172,7 +172,7 @@ export const config = {
       ],
       activeArrow: true,
       showActiveDesc: false,
-      url: 'https://www.kaisasecurities.com/Member/Register?channel=LSKJ&YYM=23'
+      url: 'https://www.kaisasecurities.com/Member/Register?channel=ADWMSWZX&YYM=32'
     },
     {
       securitiesName: '艾德证券',
