@@ -14,7 +14,7 @@ export const config = {
       ],
       activeArrow: true,
       showActiveDesc: false,
-      url: 'https://passport.futu5.com/?channel=322&subchannel=1#reg'
+      url: 'https://passport.futunn.com/?channel=322&subchannel=1&target=https%3A%2F%2Fsetup2.futu5.com'
     },
     {
       securitiesName: '老虎证券',
@@ -190,7 +190,7 @@ export const config = {
       ],
       activeArrow: true,
       showActiveDesc: false,
-      url: 'https://aosh5.eddidapp.com/?rf=QlhZMDA1OkVEQUE='
+      url: 'https://aosh5.eddidapp.com/?rf=Q1kwMDU6RURBQQ=='
     },
     {
       securitiesName: '尊嘉金融',
