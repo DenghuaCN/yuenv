@@ -4,7 +4,7 @@
 
     <div class="content-wrap">
 
-      <div class="item-box" v-for="(item, index) in dataList" :key="index">
+      <div class="item-box" v-for="(item, total_index) in dataList" :key="total_index">
 
         <div class="top">
           <img class="logo" :src="item.iconSrc" >
@@ -48,7 +48,7 @@
 
         </div>
 
-        <button class="open-account" @click="goToUrl(item.url)">免费开户</button>
+        <button class="open-account" @click="handlerOpenAccount(total_index)">免费开户</button>
       </div>
     </div>
 
@@ -58,6 +58,7 @@
 </template>
 
 <script>
+// http://xgswscn.cn/index.html#/
 import { Swiper } from 'vux'
 import footerBar from '../../components/footerBar'
 import HeaderBanner from '../header-banner/header-banner'
@@ -77,16 +78,23 @@ export default {
       showActiveDesc: false,
       dataList: [
         ...config.dataList
-      ]
+      ],
+      goUrl: ''
     }
+  },
+  mounted() {
   },
   methods: {
     clickMore(event, index) {
       this.dataList[index].activeArrow = !this.dataList[index].activeArrow
       this.dataList[index].showActiveDesc = !this.dataList[index].showActiveDesc
     },
-    goToUrl(url) {
-      window.location.href = url
+    goToUrl() {
+      window.location.href = this.goUrl
+    },
+    async handlerOpenAccount(i) {
+      this.goUrl = this.dataList[i].url
+      await this.recordClick(i)
     },
     goToAccount(name) {
       this.$router.push({
@@ -95,6 +103,47 @@ export default {
           name: name
         }
       })
+    },
+    async recordClick(i) {
+      // let url = 'http://119.145.28.209:20896/infos.htm'
+      let url = 'http://xgswscn.cn:80/infos.htm'
+
+      let body = {
+        'data': [
+          {
+            'type': '点击开户',
+            'key': '卷商名称',
+            'value': this.dataList[i].securitiesName
+          }
+        ]
+      }
+
+      // let body = {
+      //   'data': [
+      //     {
+      //       'type': 'type3',
+      //       'key': 'key3',
+      //       'value': 'value3'
+      //     }
+      //   ]
+      // }
+
+      // 5s内无响应也会跳转
+      let timeoutId = setTimeout(() => {
+        this.goToUrl()
+      }, 5000)
+
+      await this.$axios.post(url, body, true)
+        .then((res) => {
+          console.log(res)
+          clearTimeout(timeoutId)
+          this.goToUrl()
+        })
+        .catch((err) => {
+          console.log(err)
+          clearTimeout(timeoutId)
+          this.goToUrl()
+        })
     }
   }
 }
