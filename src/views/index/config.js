@@ -14,7 +14,7 @@ export const config = {
       ],
       activeArrow: true,
       showActiveDesc: false,
-      url: 'https://passport.futu5.com/?channel=322&subchannel=1#reg'
+      url: 'https://www.futuhk.com/reg?channel=322&subchannel=1'
     },
     {
       securitiesName: '老虎证券',
@@ -32,7 +32,7 @@ export const config = {
       ],
       activeArrow: true,
       showActiveDesc: false,
-      url: 'https://www.itiger.com/activity/market/2019/stock-ali/?noPromotion=1&invite=WY01'
+      url: 'https://www.itiger.com/activity/market/2019/stock-ali/?noPromotion=1&invite=TG001'
     },
     {
       securitiesName: '华盛证券',
@@ -172,7 +172,7 @@ export const config = {
       ],
       activeArrow: true,
       showActiveDesc: false,
-      url: 'https://www.kaisasecurities.com/Member/Register?channel=LSKJ&YYM=23'
+      url: 'https://www.kaisasecurities.com/Member/Register?channel=ADWMSWZX&YYM=32'
     },
     {
       securitiesName: '艾德证券',
@@ -190,7 +190,7 @@ export const config = {
       ],
       activeArrow: true,
       showActiveDesc: false,
-      url: 'https://aosh5.eddidapp.com/?rf=QlhZMDA1OkVEQUE='
+      url: 'https://aosh5.eddidapp.com/?rf=Q1kwMDU6RURBQQ=='
     },
     {
       securitiesName: '尊嘉金融',
