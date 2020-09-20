@@ -20,7 +20,7 @@ Vue.use(utils)
 Vue.use(VueAwesomeSwiper)
 // Vue.use(vConsole)
 
-Vue.prototype.$toast = toast
+Vue.prototype.$Toast = toast
 Vue.prototype.$dialog = Dialog
 Vue.prototype.$loading = Loading
 Vue.prototype.$axios = { get, post }

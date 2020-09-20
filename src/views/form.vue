@@ -73,13 +73,13 @@ export default {
     },
     onSubmit() {
       if (!this.userName) {
-        this.$toast({msg: '请输入客户名字'})
+        this.$Toast({msg: '请输入客户名字'})
         return
       }
       this.loading = true
       setTimeout(() => {
         this.loading = false
-        this.$toast({msg: '提交成功', type: 'success'})
+        this.$Toast({msg: '提交成功', type: 'success'})
       }, 1000)
     }
   }

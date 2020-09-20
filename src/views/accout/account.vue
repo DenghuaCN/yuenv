@@ -29,7 +29,8 @@ export default {
   data() {
     return {
       securitiesName: this.$route.query.name || '',
-      phone: ''
+      phone: '',
+      isLoading: false
     }
   },
   beforeRouteLeave(to, from, next) { // 离开时
@@ -58,21 +59,23 @@ export default {
       return /^1[1-9][0-9]{9}$/.test(str)
     },
     handlerOpenAccount() {
+      // 检查手机号码格式
       if (!this.isMobile(this.phone)) {
-        this.$toast({
+        this.$Toast({
           msg: '请输入正确的电话号码',
           type: 'warning'
         })
         return false
       }
 
-      if (!this.securitiesName) {
-        return false
-      }
+      // if (!this.securitiesName) {
+      //   return false
+      // }
 
-      let goUrl = this.getsecuritiesUrl()
+      // let goUrl = this.getsecuritiesUrl()
 
-      window.location.href = goUrl
+      // window.location.href = goUrl
+      this.commitPhone()
     },
     getsecuritiesUrl() {
       let arr = config.dataList
@@ -82,6 +85,44 @@ export default {
           return arr[i].url
         }
       }
+    },
+    async commitPhone(i) {
+      if (this.isCommit) {
+        return
+      }
+
+      this.isLoading = true
+
+      let url = 'http://xgswscn.cn:80/infos.htm'
+      let body = {
+        'data': [
+          {
+            'type': '输入手机号',
+            'key': '手机号',
+            'value': this.phone
+          }
+        ]
+      }
+
+      this.$axios.post(url, body, true)
+        .then((res) => {
+          console.log(res)
+          if (res.code === 0) {
+            this.$Toast({
+              msg: '提交成功！',
+              type: 'success'
+            })
+          }
+          this.isLoading = false
+        })
+        .catch((err) => {
+          console.log(err)
+          this.$Toast({
+            msg: '提交失败！',
+            type: 'fail'
+          })
+          this.isLoading = false
+        })
     }
   }
 }

@@ -48,6 +48,7 @@
 
         </div>
 
+        <!-- <button class="open-account" @click="handlerOpenAccount(total_index)">免费开户</button> -->
         <button class="open-account" @click="handlerOpenAccount(total_index)">免费开户</button>
       </div>
     </div>
