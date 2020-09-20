@@ -107,7 +107,8 @@ export default {
       this.$axios.post(url, body, true)
         .then((res) => {
           console.log(res)
-          if (res.code === 0) {
+          let resData = res.data
+          if (resData.code === 0) {
             this.$Toast({
               msg: '提交成功！',
               type: 'success'
