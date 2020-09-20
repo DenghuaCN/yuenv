@@ -7,7 +7,7 @@
       <p class="wx-num">(cxm6688789)</p>
       <div class="bottom-desc">
         <img src="../../assets/img/yuenv/left-line.png">
-        <p>越女事务所</p>
+        <p>越女事务所-测试环境</p>
         <img src="../../assets/img/yuenv/right-line.png">
       </div>
   </div>
