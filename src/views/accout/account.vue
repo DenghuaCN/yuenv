@@ -97,10 +97,8 @@ export default {
     },
     goToUrl() {
       let url = this.getsecuritiesUrl()
-
-      setTimeout(() => {
-        window.location.href = url
-      }, 1500)
+      
+      window.location.href = url
     },
     commitAndGo() {
       if (this.isLoading) {
