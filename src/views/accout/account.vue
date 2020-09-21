@@ -135,21 +135,13 @@ export default {
 
           if (resData.code === 0) {
             clearTimeout(timeoutId)
-            this.$Toast({
-              msg: '提交成功!',
-              type: 'success'
-            })
           }
           this.isLoading = false
           this.goToUrl()
         })
         .catch((err) => {
           clearTimeout(timeoutId)
-          console.log(err)
-          this.$Toast({
-            msg: '提交失败!',
-            type: 'fail'
-          })
+          console.error(err)
           this.isLoading = false
           this.goToUrl()
         })
