@@ -109,16 +109,19 @@ export default {
 
       this.isLoading = true
 
-      let url = 'http://xgswscn.cn:80/infos.htm'
+      let url = 'http://test.xgswscn.cn:80/infos.htm' // 测试环境url
       let body = {
         'data': [
           {
-            'type': this.from,
+            'from': this.from,
+            'type': '点击开户',
             'key': this.phone,
             'value': this.securitiesName
           }
         ]
       }
+
+      // console.log(body) // print提交内容
 
       let timeoutId = setTimeout(() => {
         this.isLoading = false
