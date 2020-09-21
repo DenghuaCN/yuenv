@@ -49,7 +49,7 @@
         </div>
 
         <!-- <button class="open-account" @click="handlerOpenAccount(total_index)">免费开户</button> -->
-        <button class="open-account" @click="handlerOpenAccount(total_index)">免费开户</button>
+        <button class="open-account" @click="goToAccount(item.securitiesName)">免费开户</button>
       </div>
     </div>
 
@@ -80,7 +80,8 @@ export default {
       dataList: [
         ...config.dataList
       ],
-      goUrl: ''
+      goUrl: '',
+      from: this.$route.query.from || ''
     }
   },
   mounted() {
@@ -101,7 +102,8 @@ export default {
       this.$router.push({
         path: '/account',
         query: {
-          name: name
+          name: name,
+          from: this.from
         }
       })
     },

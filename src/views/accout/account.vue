@@ -12,13 +12,12 @@
       <input class="phone-input" v-model="phone" type="text" placeholder="请输入手机号码">
     </div>
 
+    <button class="account-button" @click="handlerOpenAccount">我要开户</button>
+
     <div class="phone-desc">
       <p>请输入正确手机号</p>
       <p>仅作<span>后期奖励发放和专属服务凭证</span></p>
     </div>
-
-    <button class="account-button" @click="handlerOpenAccount">我要开户</button>
-
   </div>
 </template>
 
@@ -29,6 +28,7 @@ export default {
   data() {
     return {
       securitiesName: this.$route.query.name || '',
+      from: this.$route.query.from || '',
       phone: '',
       isLoading: false
     }
@@ -68,14 +68,23 @@ export default {
         return false
       }
 
-      // if (!this.securitiesName) {
-      //   return false
-      // }
+      if (this.securitiesName === '') {
+        this.$Toast({
+          msg: '请选择券商',
+          type: 'warning'
+        })
+        setTimeout(() => {
+          this.$router.push({
+            path: '/',
+            query: {
+              from: this.from
+            }
+          })
+        }, 1500)
+        return
+      }
 
-      // let goUrl = this.getsecuritiesUrl()
-
-      // window.location.href = goUrl
-      this.commitPhone()
+      this.commitAndGo()
     },
     getsecuritiesUrl() {
       let arr = config.dataList
@@ -86,8 +95,15 @@ export default {
         }
       }
     },
-    async commitPhone(i) {
-      if (this.isCommit) {
+    goToUrl() {
+      let url = this.getsecuritiesUrl()
+
+      setTimeout(() => {
+        window.location.href = url
+      }, 1500)
+    },
+    commitAndGo() {
+      if (this.isLoading) {
         return
       }
 
@@ -97,32 +113,42 @@ export default {
       let body = {
         'data': [
           {
-            'type': '输入手机号',
-            'key': '手机号',
-            'value': this.phone
+            'type': this.from,
+            'key': this.phone,
+            'value': this.securitiesName
           }
         ]
       }
+
+      let timeoutId = setTimeout(() => {
+        this.isLoading = false
+        this.goToUrl()
+      }, 5000)
 
       this.$axios.post(url, body, true)
         .then((res) => {
           console.log(res)
           let resData = res.data
+
           if (resData.code === 0) {
+            clearTimeout(timeoutId)
             this.$Toast({
-              msg: '提交成功！',
+              msg: '提交成功!',
               type: 'success'
             })
           }
           this.isLoading = false
+          this.goToUrl()
         })
         .catch((err) => {
+          clearTimeout(timeoutId)
           console.log(err)
           this.$Toast({
-            msg: '提交失败！',
+            msg: '提交失败!',
             type: 'fail'
           })
           this.isLoading = false
+          this.goToUrl()
         })
     }
   }
