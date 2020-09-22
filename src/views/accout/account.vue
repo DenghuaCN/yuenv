@@ -107,7 +107,7 @@ export default {
 
       this.isLoading = true
 
-      let url = 'http://test.xgswscn.cn:80/infos.htm' // 测试环境url
+      let url = 'http://xgswscn.cn:80/infos.htm' // 测试环境url
       let body = {
         'data': [
           {
