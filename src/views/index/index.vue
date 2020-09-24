@@ -31,7 +31,7 @@
           </div>
 
           <div class="get-more">
-            <div @click="clickMore($event, index)">
+            <div @click="clickMore($event, total_index)">
               <span>了解更多</span>
               <div class="arrow" :class="{'active-arrow': item.activeArrow}"></div>
             </div>
