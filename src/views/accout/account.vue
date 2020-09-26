@@ -97,7 +97,7 @@ export default {
     },
     goToUrl() {
       let url = this.getsecuritiesUrl()
-      
+
       window.location.href = url
     },
     commitAndGo() {
