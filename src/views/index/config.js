@@ -206,7 +206,7 @@ export const config = {
       ],
       activeArrow: true,
       showActiveDesc: false,
-      url: 'https://accountapi.zinvestglobal.com/miningaccount/accounth5/regist?activity=&channel_open=pEYQVy3O3wvYOxwbxpQX2A..&hmsr=qdwy&hmpl=&hmcu=&hmkw=&hmci='
+      url: 'https://accountapi.investassistant.com/miningaccount/accounth5/regist?activity=&channel_open=pEYQVy3O3wvYOxwbxpQX2A..&hmsr=qdwy&hmpl=&hmcu=&hmkw=&hmci='
     }
   ]
 }
