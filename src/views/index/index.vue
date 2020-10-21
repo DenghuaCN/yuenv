@@ -109,7 +109,7 @@ export default {
     },
     async recordClick(i) {
       // let url = 'http://119.145.28.209:20896/infos.htm'
-      let url = 'http://xgswscn.cn:80/infos.htm'
+      let url = 'http://test.xgswscn.cn:80/infos.htm'
 
       let body = {
         'data': [
