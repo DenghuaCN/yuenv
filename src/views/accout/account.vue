@@ -5,6 +5,7 @@
         <img src="../../assets/img/yuenv/account/head.png" >
       </div>
       <img class="name" src="../../assets/img/yuenv/account/text.png" >
+      <!-- <p class="head-text">港哥事务所</p> -->
     </div>
 
     <div class="from">
