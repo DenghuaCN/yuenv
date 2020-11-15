@@ -2,10 +2,10 @@
   <div class="account-wrap">
     <div class="head-wrap">
       <div class="head-box">
-        <img src="../../assets/img/yuenv/account/head.png" >
+        <img src="../../assets/img/yuenv/account/head2.png" >
       </div>
-      <img class="name" src="../../assets/img/yuenv/account/text.png" >
-      <!-- <p class="head-text">港哥事务所</p> -->
+      <!-- <img class="name" src="../../assets/img/yuenv/account/text.png" > -->
+      <p class="head-text">港哥事务所</p>
     </div>
 
     <div class="from">
