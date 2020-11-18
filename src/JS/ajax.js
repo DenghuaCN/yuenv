@@ -7,17 +7,29 @@ const MOCK_URL = 'http://mock.com'
 let http = axios.create({
   baseURL: process.env.NODE_ENV === 'production' ? PRODUCT_URL : MOCK_URL
 })
+
+function clearAllCookie() {
+    var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+    if (keys) {
+        for (var i = keys.length; i--;)
+            document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
+    }
+}
+
 // 请求拦截器
 http.interceptors.request.use(
   config => {
     // 设置token，Content-Type
-    var token = sessionStorage.getItem('UserLoginToken')
-    config.headers['token'] = token
+    // var token = sessionStorage.getItem('UserLoginToken')
+    // config.headers['token'] = token
+    
     config.headers['Content-Type'] = 'application/json;charset=UTF-8'
     // 请求显示loading效果
     if (config.loading === true) {
       vm.$loading.show()
     }
+    
+    clearAllCookie()
     return config
   },
   error => {
