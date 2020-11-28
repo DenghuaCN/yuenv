@@ -5,86 +5,87 @@ import vm from '../main'
 const PRODUCT_URL = 'https://xxxx.com'
 const MOCK_URL = 'http://mock.com'
 let http = axios.create({
-  baseURL: process.env.NODE_ENV === 'production' ? PRODUCT_URL : MOCK_URL
+    baseURL: process.env.NODE_ENV === 'production' ? PRODUCT_URL : MOCK_URL
 })
 
 function clearAllCookie() {
     var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
     if (keys) {
-        for (var i = keys.length; i--;)
+        for (var i = keys.length; i--;) {
             document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
+        }
     }
 }
 
 // 请求拦截器
 http.interceptors.request.use(
-  config => {
-    // 设置token，Content-Type
-    // var token = sessionStorage.getItem('UserLoginToken')
-    // config.headers['token'] = token
-    
-    config.headers['Content-Type'] = 'application/json;charset=UTF-8'
-    // 请求显示loading效果
-    if (config.loading === true) {
-      vm.$loading.show()
-    }
-    
-    clearAllCookie()
-    return config
-  },
-  error => {
-    vm.$loading.hide()
-    return Promise.reject(error)
-  }
-)
-// 响应拦截器
+        config => {
+            // 设置token，Content-Type
+            // var token = sessionStorage.getItem('UserLoginToken')
+            // config.headers['token'] = token
+
+            config.headers['Content-Type'] = 'application/json;charset=UTF-8'
+                // 请求显示loading效果
+            if (config.loading === true) {
+                vm.$loading.show()
+            }
+
+            clearAllCookie()
+            return config
+        },
+        error => {
+            vm.$loading.hide()
+            return Promise.reject(error)
+        }
+    )
+    // 响应拦截器
 http.interceptors.response.use(
-  res => {
-    vm.$loading.hide()
-    // token失效，重新登录
-    if (res.data.code === 401) {
-      //  重新登录
+    res => {
+        vm.$loading.hide()
+            // token失效，重新登录
+        if (res.data.code === 401) {
+            //  重新登录
+        }
+        return res
+    },
+    error => {
+        vm.$loading.hide()
+        return Promise.reject(error)
     }
-    return res
-  },
-  error => {
-    vm.$loading.hide()
-    return Promise.reject(error)
-  }
 )
 
 function get(url, data, lodaing) {
-  return new Promise((resolve, reject) => {
-    http.get(url)
-      .then(
-        response => {
-          resolve(response)
-        },
-        err => {
-          reject(err)
-        }
-      )
-      .catch(error => {
-        reject(error)
-      })
-  })
+    return new Promise((resolve, reject) => {
+        http.get(url)
+            .then(
+                response => {
+                    resolve(response)
+                },
+                err => {
+                    reject(err)
+                }
+            )
+            .catch(error => {
+                reject(error)
+            })
+    })
 }
 
 function post(url, data, loading) {
-  return new Promise((resolve, reject) => {
-    http.post(url, data, { loading: loading })
-      .then(
-        response => {
-          resolve(response)
-        },
-        err => {
-          reject(err)
-        }
-      )
-      .catch(error => {
-        reject(error)
-      })
-  })
+    return new Promise((resolve, reject) => {
+        http.post(url, data, {
+                loading: loading
+            })
+            .then((response) => {
+                resolve(response)
+            })
+            .catch((error) => {
+                reject(error)
+            })
+    })
 }
 
-export { get, post }
+export {
+    get,
+    post
+}
