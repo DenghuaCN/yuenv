@@ -15,7 +15,7 @@ module.exports = {
         // Various Dev Server settings
         host: 'localhost', // can be overwritten by process.env.HOST
         port: 8085, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-        autoOpenBrowser: false,
+        autoOpenBrowser: false, // 自动打开浏览器
         errorOverlay: true,
         notifyOnErrors: true,
         poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
@@ -31,6 +31,7 @@ module.exports = {
         /**
          * Source Maps
          */
+        productionSourceMap: true,
 
         // https://webpack.js.org/configuration/devtool/#development
         devtool: 'cheap-module-eval-source-map',
@@ -40,7 +41,12 @@ module.exports = {
         // https://vue-loader.vuejs.org/en/options.html#cachebusting
         cacheBusting: true,
 
-        cssSourceMap: false
+        cssSourceMap: true,
+        // Run the build command with an extra argument to
+        // View the bundle analyzer report after build finishes:
+        // `npm run build --report`
+        // Set to `true` or `false` to always turn it on or off
+        bundleAnalyzerReport: true
     },
 
     build: {
@@ -51,7 +57,7 @@ module.exports = {
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
         assetsPublicPath: '/', // http协议使用  '/'
-        // assetsPublicPath: './', // 放github 使用 './'
+        // assetsPublicPath: './', // 放github pages 使用 './'
 
         /**
          * Source Maps
@@ -71,6 +77,6 @@ module.exports = {
         // View the bundle analyzer report after build finishes:
         // `npm run build --report`
         // Set to `true` or `false` to always turn it on or off
-        bundleAnalyzerReport: process.env.npm_config_report
+        bundleAnalyzerReport: true // 
     }
 }

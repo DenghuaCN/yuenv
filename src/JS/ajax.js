@@ -1,6 +1,6 @@
 import axios from 'axios'
-import vm from '../main'
-// import Vue from 'vue'
+import vm from '../main' // 获取main.js的Vue实例
+import Vue from 'vue'
 
 const PRODUCT_URL = 'https://xxxx.com'
 const MOCK_URL = 'http://mock.com'

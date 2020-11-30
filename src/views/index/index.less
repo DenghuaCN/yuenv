@@ -1,203 +1,230 @@
 .viewport-wrap-box {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: rgb(252,223,190);
-  overflow: auto; // 父容器塌陷
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: #fcdfbe;
-  overflow: auto;
-//   background-image: url("../../assets/img/yuenv/bottom-bg.png");
-  background-image: url("../../assets/img/yuenv/bottom-bg.png");
-  // background-position: 0 100%;
-  background-size: cover;
-  background-attachment: local;
-  .content-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    .item-box {
-      width: 345px;
-      margin-bottom: 30px;
-      border-radius: 4px;
-      box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.33);
-      background-color: #fff;
-      transition: all 1s ease-out;
-      .top {
-        display: flex;
-        justify-content: space-between;
-        padding: 15px;
-        align-items: center;
-        .logo {
-          width: 55px;
-          height: 55px;
-          margin-right: 12px;
-        }
-        .desc-box {
-          display: flex;
-          flex-direction: column;
-          justify-content: start;
-          flex-grow: 1;
-          .securities-box {
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
-            .securities-name {
-              font-size: 16px;
-              line-height: 16px;
-              letter-spacing: 0px;
-              color: #252323;
-              margin-right: 10px;
-              font-weight: bold;
-            }
-            .small-securities-name {
-              font-size: 12px;
-              line-height: 12px;
-              color: #252323;
-            }
-          }
-          .icon-box {
-            // border: 1px solid red;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-            .icon-desc {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              .icon {
-                width: 15px;
-                height: 15px;
-                margin-right: 4px;
-              }
-              span {
-                color: #ef8407;
-                font-size: 13px;
-              }
-            }
-          }
-        }
-      }
-      .content {
-        // border: 1px solid green;
-        padding: 15px;
-        transition: all 1s ease-out;
-        .main-desc {
-          // border: 1px solid red;
-          margin-bottom: 15px;
-          display: flex;
-          justify-content: flex-start;
-          align-items: start;
-          .left {
-            .dot {
-              width: 6px;
-              height: 6px;
-              margin: 0 10px;
-              margin-top: 5px;
-              border-radius: 100%;
-              background-color: #cccccc;
-            }
-          }
-          .main-desc-text {
-            font-size: 14px;
-            color: #666;
-            letter-spacing: 0.2px;
-          }
-        }
-        .get-more {
-          margin: 10px 0 10px 0;
-          // border: 1px solid green;
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          cursor: pointer;
-          span {
-            font-size: 14px;
-            letter-spacing: 0.2px;
-            color: #999999;
-          }
-          .arrow{
-            display: inline-block;
-            width: 0;
-            height: 0;
-            border: 7px solid;
-            border-color: #999 transparent transparent transparent;
-            position: relative;
-            top: 5px;
-            transition: all 0.3s ease-out;
-            transform-origin: 50% 20%;
-            transform: rotate(180deg);
-
-          }
-          .arrow::after{
-              content: '';
-              position: absolute;
-              top: -9px;
-              left: -7px;
-              border: 7px solid;
-              border-color: white transparent transparent transparent;
-          }
-          .active-arrow {
-            transform: rotate(0deg);
-
-          }
-        }
-        .active-desc {
-          // border: 1px solid green;
-          transition: all 1s ease-out;
-          height: 0;
-          overflow: hidden;
-          .desc-item {
-            // border: 1px solid #999999;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: start;
-            .left {
-              .dot {
-                width: 6px;
-                height: 6px;
-                margin: 0 10px;
-                margin-top: 5px;
-                border-radius: 100%;
-                background-color: #cccccc;
-              }
-            }
-            .main-desc-text {
-              font-size: 14px;
-              color: #666;
-              letter-spacing: 0.2px;
-            }
-          }
-        }
-        .show-active-desc {
-          height: auto;
-          // visibility: hidden;
-        }
-      }
-      .open-account {
-        width: 100%;
-        height: 50px;
-        display: block;
-        font-weight: bold;
-        background-color: #f58300;
-        border-radius: 0 0 4px 4px;
-        color: #ffffff;
-        font-size: 20px;
-      }
-    }
-  }
-
-  .bottom-bg {
-    bottom: 0;
-    position: absolute;
     width: 100%;
-    // height: 100%;
-  }
+    height: 100%;
+    position: relative;
+    background-color: rgb(252, 223, 190);
+    overflow: auto; // 父容器塌陷
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #fcdfbe;
+    overflow: auto;
+    background-image: url("../../assets/img/yuenv/bottom-bg.png");
+    // background-position: 0 100%;
+    background-size: cover;
+    background-attachment: local;
+
+    .content-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+
+        .item-box {
+            width: 345px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.33);
+            background-color: #fff;
+            transition: all 1s ease-out;
+
+            .top {
+                display: flex;
+                justify-content: space-between;
+                padding: 15px;
+                align-items: center;
+
+                .logo {
+                    width: 55px;
+                    height: 55px;
+                    margin-right: 12px;
+                }
+
+                .desc-box {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    flex-grow: 1;
+
+                    .securities-box {
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+
+                        .securities-name {
+                            font-size: 16px;
+                            line-height: 16px;
+                            letter-spacing: 0px;
+                            color: #252323;
+                            margin-right: 10px;
+                            font-weight: bold;
+                        }
+
+                        .small-securities-name {
+                            font-size: 12px;
+                            line-height: 12px;
+                            color: #252323;
+                        }
+                    }
+
+                    .icon-box {
+                        // border: 1px solid red;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 10px;
+
+                        .icon-desc {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .icon {
+                                width: 15px;
+                                height: 15px;
+                                margin-right: 4px;
+                            }
+
+                            span {
+                                color: #ef8407;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content {
+                // border: 1px solid green;
+                padding: 15px;
+                transition: all 1s ease-out;
+
+                .main-desc {
+                    // border: 1px solid red;
+                    margin-bottom: 15px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: start;
+
+                    .left {
+                        .dot {
+                            width: 6px;
+                            height: 6px;
+                            margin: 0 10px;
+                            margin-top: 5px;
+                            border-radius: 100%;
+                            background-color: #cccccc;
+                        }
+                    }
+
+                    .main-desc-text {
+                        font-size: 14px;
+                        color: #666;
+                        letter-spacing: 0.2px;
+                    }
+                }
+
+                .get-more {
+                    margin: 10px 0 10px 0;
+                    // border: 1px solid green;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    cursor: pointer;
+
+                    span {
+                        font-size: 14px;
+                        letter-spacing: 0.2px;
+                        color: #999999;
+                    }
+
+                    .arrow {
+                        display: inline-block;
+                        width: 0;
+                        height: 0;
+                        border: 7px solid;
+                        border-color: #999 transparent transparent transparent;
+                        position: relative;
+                        top: 5px;
+                        transition: all 0.3s ease-out;
+                        transform-origin: 50% 20%;
+                        transform: rotate(180deg);
+
+                    }
+
+                    .arrow::after {
+                        content: '';
+                        position: absolute;
+                        top: -9px;
+                        left: -7px;
+                        border: 7px solid;
+                        border-color: white transparent transparent transparent;
+                    }
+
+                    .active-arrow {
+                        transform: rotate(0deg);
+
+                    }
+                }
+
+                .active-desc {
+                    // border: 1px solid green;
+                    transition: all 1s ease-out;
+                    height: 0;
+                    overflow: hidden;
+
+                    .desc-item {
+                        // border: 1px solid #999999;
+                        margin-bottom: 15px;
+                        display: flex;
+                        align-items: start;
+
+                        .left {
+                            .dot {
+                                width: 6px;
+                                height: 6px;
+                                margin: 0 10px;
+                                margin-top: 5px;
+                                border-radius: 100%;
+                                background-color: #cccccc;
+                            }
+                        }
+
+                        .main-desc-text {
+                            font-size: 14px;
+                            color: #666;
+                            letter-spacing: 0.2px;
+                        }
+                    }
+                }
+
+                .show-active-desc {
+                    height: auto;
+                    // visibility: hidden;
+                }
+            }
+
+            .open-account {
+                width: 100%;
+                height: 50px;
+                display: block;
+                font-weight: bold;
+                background-color: #f58300;
+                border-radius: 0 0 4px 4px;
+                color: #ffffff;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .bottom-bg {
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        // height: 100%;
+    }
 }
+
 // .list {
 //   margin-top: 10px;
 //   background-color: #fff;
@@ -214,6 +241,6 @@
 //   }
 // }
 /deep/ em {
-  color: #000;
-  font-weight: bold;
+    color: #000;
+    font-weight: bold;
 }

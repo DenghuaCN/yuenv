@@ -11,8 +11,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-const env = require('../config/prod.env')
-
 const webpackConfig = merge(baseWebpackConfig, {
     module: {
         rules: utils.styleLoaders({
@@ -30,7 +28,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     plugins: [
         // http://vuejs.github.io/vue-loader/en/workflow/production.html
         new webpack.DefinePlugin({
-            'process.env': env
+            'process.env': require('../config/prod.env')
         }),
         new UglifyJsPlugin({
             uglifyOptions: {
@@ -66,13 +64,14 @@ const webpackConfig = merge(baseWebpackConfig, {
         // you can customize output by editing /index.html
         // see https://github.com/ampedandwired/html-webpack-plugin
         new HtmlWebpackPlugin({
-            filename: config.build.index,
-            template: 'index.html',
-            inject: true,
+            filename: config.build.index, //生成的html存放路径，相对于path
+            template: path.resolve(__dirname, '../src/index.html'), //html模板路径
+            inject: true, //允许插件修改哪些内容，包括head与body
+            cache: false, //是否缓存,
             minify: {
-                removeComments: true,
-                collapseWhitespace: true,
-                removeAttributeQuotes: true
+                removeComments: true, //删除html中的注释代码
+                collapseWhitespace: true, //删除html中的空白符
+                removeAttributeQuotes: true //删除html元素中属性的引号
                     // more options:
                     // https://github.com/kangax/html-minifier#options-quick-reference
             },
@@ -132,12 +131,13 @@ if (config.build.productionGzip) {
             algorithm: 'gzip',
             test: new RegExp('\\.(' + productionGzipExtensions.join('|') + ')$'),
             threshold: 10240,
-            minRatio: 0.8
+            minRatio: 0.8,
+            deleteOriginalAssets: false
         })
     )
 }
 
-if (config.build.bundleAnalyzerReport) {
+if (config.build.bundleAnalyzerReport) { // 是否配置webpack-bundle-analyzer
     const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
     webpackConfig.plugins.push(new BundleAnalyzerPlugin())
 }
