@@ -159,7 +159,7 @@ export const config = {
             ],
             activeArrow: true,
             showActiveDesc: false,
-            url: 'https://sns.9fstock.com/sunline/main/index.html#/community/accounts/login?invUserId=1&channelId=509&utm_source=3rd-zhuce&utm_medium=YNSWS'
+            url: 'https://sns.fyact.com/sunline/main/index.html#/community/accounts/login?invUserId=1&channelId=509&utm_source=3rd-zhuce&utm_medium=YNSWS'
         },
         {
             securitiesName: '盈立证券',
