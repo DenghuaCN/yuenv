@@ -18,7 +18,6 @@ before_script:
 script:
 - npm run build
 
-
 after_script:
   - cd ./dist
   - git init
