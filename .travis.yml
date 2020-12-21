@@ -24,6 +24,8 @@ after_script:
   - git init
   - git config user.name "${U_NAME}"
   - git config user.email "${U_EMAIL}"
+  - git config --global --unset http.proxy #解决 fatal: unable to access 'https://https://github.com/DenghuaCN/yuenv.git/': Could not resolve host: https
+  - git config --global --unset https.proxy
   - git add .
   - git commit -m "Travis CI Auto Builder"
   - git push --force "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
