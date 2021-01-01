@@ -28,7 +28,7 @@ after_script:
   - git add .
   - git commit -m "Travis CI Auto Builder"
   - git push --force "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
-  - ssh Administator@129.226.173.236 'cd C:\nginx-1.19.5\html && rm -r -fo dist && mkdir dist && cd ./dist && git init && git remote add origin git@github.com:DenghuaCN/yuenv.git && git fetch origin deploy:dist && git checkout dist && git pull origin deploy'
+  # - ssh Administator@129.226.173.236 'cd C:\nginx-1.19.5\html && rm -r -fo dist && mkdir dist && cd ./dist && git init && git remote add origin git@github.com:DenghuaCN/yuenv.git && git fetch origin deploy:dist && git checkout dist && git pull origin deploy'
   # - ssh your-name@xx.xx.xx.xx 'cd /your-path && git fetch --all && git reset --hard origin/deploy && git pull --allow-unrelated-histories'
 
 branches:

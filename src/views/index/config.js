@@ -13,7 +13,7 @@ export const config = {
             ],
             activeArrow: true,
             showActiveDesc: false,
-            url: 'https://www.futuhk.com/reg?channel=322&subchannel=1'
+            url: 'https://passport.futunn.com/?channel=990&subchannel=11&target=https%3A%2F%2Fsetup2.futuhk.com'
         },
         {
             securitiesName: '老虎证券',
@@ -49,7 +49,7 @@ export const config = {
             ],
             activeArrow: true,
             showActiveDesc: false,
-            url: 'https://www.vbkr.com/hd/marketing/2019/scnl/ZDRpMHI3cDQzYjJl/register'
+            url: 'https://passport.hstong.com/marketing/scnl/M2JvZWpjMjI2NGwz/login'
         },
         {
             securitiesName: '艾德证券',
@@ -159,7 +159,7 @@ export const config = {
             ],
             activeArrow: true,
             showActiveDesc: false,
-            url: 'https://sns.fyact.com/sunline/main/index.html#/community/accounts/login?invUserId=1&channelId=509&utm_source=3rd-zhuce&utm_medium=YNSWS'
+            url: 'https://sns.fyact.com/sunline/main/index.html#/community/accounts/login?invUserId=1&channelId=910&utm_source=3rd-zhuce&utm_medium=qd'
         },
         {
             securitiesName: '盈立证券',
@@ -179,7 +179,7 @@ export const config = {
             ],
             activeArrow: true,
             showActiveDesc: false,
-            url: ' https://m.yxzq.com/webapp/marketing/jump-register.html?register-ct=ic&register-cid=788&ICode=266233#/register'
+            url: ' https://m.yxzq.com/u/010000Cs0I'
         },
         {
             securitiesName: '佳兆业证券',
