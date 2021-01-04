@@ -24,14 +24,14 @@ export const config = {
             ],
             activeDesc: [
                 '开户完需在“设置-账户管理”进行个人信息验证',
-                '无现金打新，融资打新100，15-20倍杠杆，利率2-3%',
+                '现金打新50，融资打新100，15-20倍杠杆，利率2-3%',
                 '标准户<em>支持fps，无银证转账</em>，有暗盘，不可1手融，可市值打新',
                 '交易佣金：0.029%+15元平台费',
                 '卖出股票资金可实时用于打新'
             ],
             activeArrow: true,
             showActiveDesc: false,
-            url: 'https://www.itiger.com/activity/market/2019/stock-ali/?noPromotion=1&invite=TG001'
+            url: 'https://www.itiger.com/activity/forapp/welcome/#/?feature=Popup&Page=Open&group_id=634&invite=TG001'
         },
         {
             securitiesName: '华盛证券',
