@@ -31,7 +31,7 @@ export const config = {
             ],
             activeArrow: true,
             showActiveDesc: false,
-            url: 'https://www.itiger.com/activity/forapp/welcome/#/?feature=Popup&Page=Open&group_id=634&invite=TG001'
+            url: 'https://www.itiger.com/activity/forapp/welcome/#/?feature=Popup&Page=Open&group_id=634&invite=TG002'
         },
         {
             securitiesName: '华盛证券',
